@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Lab</title>
+    <link rel="stylesheet" href="src/homeStyle.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <section class="websiteTitle">Tennis Lab</section>
+        <section class="userInformation">
+            <section class="userSection">
+                <img src="images/userIcon.png" class="userIcon">
+                <div class="greeting">Hi, James</div>
+            </section>
+            <section>
+                <img src="images/logo.jpg" class="logo">
+            </section>
+            <section class="cartSection">
+                <div>cart</div>
+                <div class="numberOfItems"></div>
+            </section>
+        </section>
+    </header>
+    <nav class="nav">
+        <section class="searchContainer">
+            <input type="text" name="query" placeholder="Search..." class="searchInput">
+            <button type="submit" class="searchButton" onclick="hanldeSearch()">Search</button>
+        </section>
+        <section class="dropDown">
+            <form class="dropDownForm" onchange="goToDesiredCategory()">
+                <select id="categories" name="categories">
+                    <option value="category" selected disabled class="dropDown">category</option>
+                    <option value="shoes" class="dropDown">shoes</option>
+                    <option value="raquets" class="dropDown">raquets</option>
+                    <option value="bags" class="dropDown">bags</option>
+                </select>
+            </form>
+        </section>
+    </nav>
+
+    <section class="cardContainer">
+        <section class="card" id="r-pureAero">
+            <div> <img src="images/babolatPureAero.webp" alt="babolat pure aero" class="image"></div>
+            <h3 class="title">babolat pure aero</h3>
+            <p class="description">With its "best of class" combination of speed, power and spin, the Pure Aero is one
+                of the most popular and versatile rackets ever made. Although it is weighted for intermediate players,
+                this racket's outstanding playability and easy acceleration lend it an appeal that cuts across ability
+                levels and stroke styles. For 2022, in addition to a more arm-friendly flex point, Babolat adds comfort
+                with NF² Technology, which uses flax inserts in the handle and upper hoop to soften ball impact. Babolat
+                also updates its FSI Spin technology with slightly tighter string spacing. The result is greater control
+                when maximizing stroke speed and loading the ball with spin.</p>
+            <div class="priceAndOrder">
+                <div class="price"> price 209,90 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="pureAero">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="r-speedMP">
+            <div> <img src="images/headSpeedMP.webp" alt="head speed MP" class="image"></div>
+            <h3 class="title">head speed MP</h3>
+            <p class="description">The latest update to the Speed MP doubles down on the outstanding feel, quick
+                handing and controllable power that has long defined the Speed franchise. With its classic straight beam
+                and sub 65-RA, the Speed MP 2022 delivers outstanding ball feedback. It also feels solid against pace
+                while possessing the needed speed for hitting shots on the run or staying active at net. Compared to the
+                Speed Pro, this stick is not only lighter and faster, it also packs a more modern and spin-friendly
+                string pattern. For 2022, Head keeps Graphene 360+ which combines the stability and power of Graphene
+                360 with SpiralFibers in the lower head for a cleaner feel at impact. Head also adds a uniquely flexible
+                Auxetic construction in the yoke, which calibrates ball feedback to impact force. </p>
+            <div class="priceAndOrder">
+                <div class="price"> price 139,99 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="speedMP">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="r-shift99">
+            <div> <img src="images/wilsonshift99pro.jpg.webp" alt="wilson shift 99 pro" class="image"></div>
+            <h3 class="title">wilson shift 99 pro</h3>
+            <p class="description">Introducing the Shift Pro! With this racket Wilson releases the official cosmetic
+                version of the Wilson Labs Project Shift 99 315, a prototype released in February of 2023. Featuring a
+                639 cm² head and a surgical 18x20 string pattern, the Shift 99 Pro packs enough weight to comfortably
+                redirect higher levels of pace while also offering plenty of pop to those who can leverage its mass.
+                Despite having a tight pattern, the Shift Pro has impressive spin-potential, making it easier to control
+                shot trajectory from the baseline and at net. As with the lighter Shift 99, this racket's graphite
+                fibers have been engineered to help the frame bend in ways that compliment the explosive mechanics of
+                the modern game. </p>
+            <div class="priceAndOrder">
+                <div class="price"> price 171,90 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="shift99">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="r-vcore">
+            <div> <img src="images/yonexVcore95.webp" alt="yonex vcore 95" class="image"></div>
+            <h3 class="title">yonex vcore 95</h3>
+            <p class="description">Yonex makes impressive changes to the VCORE 95 one of the game's most user-friendly
+                midsize rackets. Like the previous generation, this stick is fast and surgical, and it rewards seasoned
+                ball strikers with an extremely precise ball. Although not as heavy and stable as a traditional player's
+                racket, the VCORE 95 feels remarkably solid for its speedy sub-325 swingweight. For 2023 Yonex
+                reengineers the frame's geometry. In addition to redesigning the shaft and making the beam's face
+                thinner, Yonex has widened the surface area of the racket's upper hoop, resulting in a more stable,
+                powerful and spin-friendly hitting experience. Other new features include SIF Grommets, which deploys a
+                silicone oil infusion to reduce the friction between the string and grommet. The upshot is greater
+                string movement for increased snapback and easier access to spin. Yonex has also lowered the RA, giving
+                this stick even better feedback than previous versions. As with the previous generation, this racket has
+                2-NAMD FlexForce Graphite in the upper shaft and lower hoop, enabling the racket to deflect and snapback
+                effectively through impact.</p>
+            <div class="priceAndOrder">
+                <div class="price"> price 172,90 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="vcore">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="r-FX500">
+            <div> <img src="images/donlupFX500.webp" alt="donlup FX 500" class="image"></div>
+            <h3 class="title">donlup FX 500</h3>
+            <p class="description">Updated with a slightly softer feel for 2023, the FX 500 is ideal for aggressive
+                players looking to load the ball with pace and spin. At 300 grams (unstrung), this racket is not only
+                suitable for intermediate players, but it should also tempt the more advanced ball striker who wants a
+                speedy option. Compared to the FX 500 Tour, this racket has a slightly larger head and thicker beam. As
+                a result it has a tad more power, but it still packs enough precision for ambitious targeting. For 2023
+                the FX 500 gets a more flexible beam, giving it a softer, more arm-friendly response than the previous
+                generation. Dunlop has also tweaked the grommet system to help the string bed return greater energy to
+                the ball (think power). As with the previous generation, the FX 500 benefits from Sonic Core
+                w/Infinergy, which is added to the upper hoop to soften the feel of impact. Additional features include
+                a Power Boost Frame Geometry which combines a speedy aerodynamic profile with a wider throat for
+                stability.</p>
+            <div class="priceAndOrder">
+                <div class="price"> price 159,91 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="FX500">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="r-whiteout98">
+            <div> <img src="images/solincoWhiteout98.webp" alt="solinco whiteout 98" class="image"></div>
+            <h3 class="title">solinco whiteout 98</h3>
+            <p class="description">Introducing the Whiteout 305 18x20! With this racket, Solinco gives experienced
+                players an extremely precise weapon. In addition to its 98 square inch head and 21.7 mm straight beam
+                this stick packs an 18x20 string pattern, giving it an extremely predictable, laser-like trajectory. The
+                upshot is a racket that lets you pull the trigger and target the lines without having to worry about
+                over hitting. Technologies include 40T Carbon Fiber at 3/9 o'clock, resulting in a larger sweetspot and
+                greater torsional stability. The feel is further enhanced by Liquid Crystal Technology which is added to
+                the layup in order to reduce vibrations and lighten the load on your tendons. The Whiteout 305 18x20
+                also benefits from Foam Technology in the head, giving it a wonderfully solid feel through impact.</p>
+            <div class="priceAndOrder">
+                <div class="price"> price 195,89 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="whiteout98">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="r-TFightISO">
+            <div> <img src="images/tecnifiberTFightISO.webp" alt="tecnifiber TFight ISO" class="image"></div>
+            <h3 class="title">tecnifiber TFight ISO</h3>
+            <p class="description">Tecnifibre adds another chapter to the heaviest member of the TFIGHT family. Named
+                the TFight ISO 315, this stick combines spin-friendly precision with exceptional ball feedback. It also
+                comes around surprisingly fast for a 315 gram frame, making it great for whipping up spin, hitting shots
+                on the run or charging into the front court and finishing points. For 2023, the string bed gets updated
+                with Tecnifibre's ISOFLEX System which creates a more forgiving and consistent feeling string bed. Other
+                features include Tecnifibre's innovative RS Section Beam, which combines square and elliptical shapes to
+                deliver the perfect balance between control and power. In addition to reinforcing the yoke for greater
+                stability, the TFIGHT has been injected with Foam giving it a wonderfully solid feel at impact. </p>
+            <div class="priceAndOrder">
+                <div class="price"> price 182,90 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="TFightISO">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="s-vapor">
+            <div> <img src="images/vaporPro.webp" alt="nike vapor pro 2 clay" class="image"></div>
+            <h3 class="title">nike vapor pro 2 clay</h3>
+            <p class="description">Building off the success of the first version, this Nike Vapor Pro 2 Clay carries on
+                the speedy feel, breathability, and even more comfort! Now featuring an Air Zoom unit in the forefoot
+                for more cushioning underfoot, and a springy, explosive feel. The upper feels nice and contoured, due to
+                the stretchy internal sleeve, while the outer shell is well ventilated and supportive. Full herringbone
+                Claybreaker outsole pattern extends up on the medial side of the toe box, providing maximum traction and
+                durability on clay courts.</p>
+            <div class="priceAndOrder">
+                <div class="price"> price 99,89 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="vapor">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="s-barricade">
+            <div> <img src="images/barricadeClay.webp" alt="adidas barricade clay" class="image"></div>
+            <h3 class="title">adidas barricade clay</h3>
+            <p class="description">Coming from a long history of being the most stable and durable shoe on the market,
+                the adidas Barricade Clay has been updated with even more comfort and a flexible feel, while maintaining
+                the protection where it is needed most. A key feature carried on from previous Barricades is the Torsion
+                System, which creates a very stable ride and will hold up to the most aggressive changes of direction.
+                This update features an asymmetric hidden lacing system, which provides secure lockdown and keeps the
+                laces protected on the medial side for hard court sliders. The comfort has been enhanced with foam pods
+                in the heel region for step-in comfort, as well as the full length BOUNCE 2.0 midsole for those players
+                putting in the long hours on court. The durability has been increased due to the adituff recycled
+                material placed at the toe and medial side of the shoe, and the outsole is formed with a full
+                herringbone tread pattern for maximum grip on clay courts.</p>
+            <div class="priceAndOrder">
+                <div class="price"> price 96,91 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="barricade">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="s-courtFF3">
+            <div> <img src="images/courtFF3.webp" alt="asics court FF 3 clay Novak" class="image"></div>
+            <h3 class="title">asics court FF 3 clay Novak</h3>
+            <p class="description">The Asics Court FF 3 Clay delivers a speedy feel, glove-like support, and the
+                stability to withstand the most aggressive movements. Designed for one of the most agile players the
+                game has ever seen Novak Djokovic, this update increases the outsole's contact area creating a stable
+                landing and reduces the load exerted on the body. The upper hugs the foot like a glove thanks to the
+                mono-sock bootie construction, and is more breathable than before due to a more open mesh under the
+                laces. FlyteFoam under foot feels very responsive and cuts down on weight, while the signature GEL
+                technology absorbs harsh court shock. The outsole features a full herringbone tread pattern to help
+                maximize traction on clay courts.</p>
+            <div class="priceAndOrder">
+                <div class="price"> price 161,99 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="courtFF3">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="s-jetTere">
+            <div> <img src="images/jetTereOmni.webp" alt="babolat jet tere" class="image"></div>
+            <h3 class="title">babolat jet tere</h3>
+            <p class="description">Named after the Maori word for swift and speed, the Jet Tere Clay not only looks
+                great but also performs well at a great value. The breathable, flexible mesh upper has been created to
+                offer step-in comfort and support while the KPRS-X midsole aids on a soft underfoot feel and shock
+                absorption. The durable Michelin rubber compound is designed in a herringbone tread pattern that offers
+                great durability and traction on clay courts. This lightweight, speed-oriented shoe will keep club
+                players quick and nimble.</p>
+            <div class="priceAndOrder">
+                <div class="price"> price 49,90 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="jetTere">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="s-speedB">
+            <div> <img src="images/speedB.Icon2.webp" alt="diadora speed B.Icon" class="image"></div>
+            <h3 class="title">diadora speed B.Icon2</h3>
+            <p class="description">Diadora raises the bar on their performance footwear, with the Speed B.Icon 2 Clay!
+                Taking the midsole superfoam from their premium running shoes and infusing it into the B-Icon, you'll
+                find great shock absorption, while also being extremely light, and responsive. The D-Skin upper material
+                hugs the foot uniformly to help maximize the support, and to reduce stress on pressure points. An outer
+                hook on the lateral side of the shoe is connected to the lacing system, which helps to lock-in the
+                heels, and boost support around the ankles. Tried and true Duratech 5000 rubber compound provides a high
+                level of wear resistance, and plenty of traction on clay courts.</p>
+            <div class="priceAndOrder">
+                <div class="price"> price 89,90 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="speedB">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="s-ultraShot">
+            <div> <img src="images/ultrashot3.webp" alt="kSwiss Ultrashot 3 Clay" class="image"></div>
+            <h3 class="title">kSwiss Ultrashot 3 Clay</h3>
+            <p class="description">Continuing to evolve based on player feedback, the Ultrashot 3 Clay proves to be the
+                most durable and stable shoe in the K-Swiss range. The breathable mesh upper is supportive and
+                comfortable and reinforced to protect your feet from hard court abrasion when sliding, while the soft
+                heel cup ensures your feet will be snug and held in place. The midsole offers an ultra-soft yet
+                resilient foam for responsive bounciness underfoot, as the herringbone outsole performs well on clay
+                court surfaces and has been engineered to provide maximum durability without weighing you down.</p>
+            <div class="priceAndOrder">
+                <div class="price"> price 139,90 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="ultraShot">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="s-AGLT23">
+            <div> <img src="images/AG-LT23.webp" alt="lacost AG-LT23" class="image"></div>
+            <h3 class="title">lacost AG-LT23</h3>
+            <p class="description">Designed to keep you feeling light and speedy on the court, the Lacoste AG-LT 23 Lite
+                is a high performance lightweight shoe, that contours to your foot like a glove. Compared to the AG-LT
+                23 Ultra, this shoe offers a lighter, speedier feel, while still providing a good amount of support due
+                to the sock fit bootie that hugs the foot comfortably. On top of the sock fit liner, there is a woven
+                upper for easy ventilation, and a cage system which maximizes the support. The Lacoste Super Responsive
+                Foam in the midsole delivers a nice balance of comfort and energy return, while a full length chassis
+                helps to add lateral stability. The outsole is equipped with a linegrip rubber compound for multi
+                directional grip on a variety of court surfaces.</p>
+            <div class="priceAndOrder">
+                <div class="price"> price 129,91 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="AGLT23">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="s-waveExceed">
+            <div> <img src="images/waveExceedTour5.webp" alt="mizuno wave exceed tour 5" class="image"></div>
+            <h3 class="title">mizuno wave exceed tour 5</h3>
+            <p class="description">Building on the success of the previous version (Wave Exceed Tour 4), this Wave
+                Exceed Tour 5 Clay is even lighter than before, providing an explosive feel, and a high level of
+                comfort. New to this version is the Enerzy technology, giving more rebound into your step to help
+                maximize foot speed. The upper material is very light, and flexible to enhance the comfort, while also
+                providing plenty of ventilation. Mizuno's DuRubber outsole is resistant to the wear and tear, and for
+                this version is molded into a defined herringbone tread pattern, to help maximize the grip on clay
+                courts.</p>
+            <div class="priceAndOrder">
+                <div class="price"> price 89,90 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="waveExceed">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="s-rushPro">
+            <div> <img src="images/rushPro4.0AC.webp" alt="Wilson Rush Pro 4.0" class="image"></div>
+            <h3 class="title">Wilson Rush Pro 4.0</h3>
+            <p class="description">Even more explosive and supportive than before, the Wilson Rush Pro 4.0 is designed
+                to meet the needs of aggressive movers. The key additions to this update are, Energy Surge material
+                placed underneath the forefoot, and to control those explosive movements Wilson has added a new 4D
+                support chassis. The Endofit upper maintains a high level of support and comfort, while also adding
+                breathability. The tried and true Duralast rubber compound provides maximum durability, and the tread
+                pattern is designed to withstand forceful lateral cuts, while allowing hard courts sliders to decelerate
+                under control.</p>
+            <div class="priceAndOrder">
+                <div class="price"> price 94,90 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="rushPro">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="s-sonicage">
+            <div> <img src="images/sonicage3Ac.webp" alt="Yonex 22 Sonicage 3 AC" class="image"></div>
+            <h3 class="title">Yonex 22 Sonicage 3 AC</h3>
+            <p class="description">Ultra-lightweight, and designed for speed, this Yonex Power Cushion Sonicage 3
+                balances comfort, and support for all movements on the court. This third generation of the Sonicage
+                features an all new upper design for added comfort, and increased durability on aggressive movements.
+                The Power Graphite plate in the middle portion of the shoe helps to maximize stability, while cutting
+                down on extra weight. The Power Cushion + midsole helps absorb shock while offering a plush feel
+                underfoot. Yonex also equips this shoe with their Roundsole technology, for a smoother transition while
+                sprinting around the court. The durable rubber outsole offers a high level of traction on all court
+                surfaces.</p>
+            <div class="priceAndOrder">
+                <div class="price"> price 109,90 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="sonicage">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="b-aero12r">
+            <div> <img src="images/pureAero12rh.webp" alt="Babolat Pure Aero RH12 Bag" class="image"></div>
+            <h3 class="title">Babolat Pure Aero RH12 Bag</h3>
+            <p class="description">Featuring fresh cosmetics, the Pure Aero 12 Pack Bag has been designed for the
+                ultimate
+                player and features two compartments which have Isothermal Protection (in an updated white color as
+                Babolat
+                no longer uses dye to be more sustainable) and can hold up to 5 rackets each while the middle
+                compartment is
+                just as large and has room for 5 rackets as well or can carry other gear. There are exterior pockets
+                with
+                internal organizational features for your smaller items and accessories as well as a vented pocket ideal
+                for
+                carrying shoes or dirty gear. Traveling with this bag will be comfortable when utilizing the attached,
+                padded backpack straps and the quick grab handles make it easy to grab and go. If tennis runs in your
+                blood,
+                this bag is for you!</p>
+            <div class="priceAndOrder">
+                <div class="price"> price 104,90 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="aero12r">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="b-federerDNA">
+            <div> <img src="images/federerDNA12pb.webp" alt="Wilson Federer DNA 12 Pack Bag" class="image"></div>
+            <h3 class="title">Wilson Federer DNA 12 Pack Bag</h3>
+            <p class="description">Inspired by the sophisticated, yet simple style of Roger Federer, the Federer DNA 12
+                Pack
+                Bag is the perfect size for the serious competitor looking to get to the courts prepared. More
+                functional
+                than previous versions, there is enough room to carry up to 12 rackets and gear and it comes with
+                Wilson's
+                Thermoguard in its two racquet compartments to ensure your strings and racquets are protected from the
+                elements. There are large accessory pockets on both sides with smaller organization features within as
+                well
+                as a smaller accessory pocket on top with Thermogaurd. This bag is super durable and has a grab handle
+                on
+                the end and middle while the heavy duty backpack straps are attached and adjustable. The clean lines
+                keep
+                this bag looking sharp, and inspire you to emulate the maestro himself.</p>
+            <div class="priceAndOrder">
+                <div class="price"> price 135,90 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="federerDNA">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="b-proX">
+            <div> <img src="images/proXRBM.webp" alt="Head Pro X Racket Bag M" class="image"></div>
+            <h3 class="title">Head Pro X Racket Bag M</h3>
+            <p class="description">Off-white and on-trend, the PRO X RACQUET BAG M tennis bag has a new and luxurious
+                design
+                – incorporating Novak Djokovic’s signature and logo and the SPEED print – which reflects his high
+                standards.
+                The distinguished shape with rounded edges adds to the premium appeal of a bag designed for Djokovic
+                fans,
+                players who choose the SPEED racquet series he endorses, and anyone committed to high performance.
+                There is a generous amount of space in a bag that can fit up to 6 racquets, with the CCT+ climate
+                control
+                technology protecting them against extreme temperatures. As well as two main compartments, the PRO X
+                RACQUET
+                BAG M comes with one inside and two outside pockets. With its backpack carry system, you can casually
+                flip
+                this bag over your shoulder or on to your back. As an illustration of how HEAD is trying to reduce
+                plastic
+                usage, the hangtag is made from recycled paper and tied with hemp cord.</p>
+            <div class="priceAndOrder">
+                <div class="price"> price 112,90 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="proX">add to cart</button>
+            </div>
+        </section>
+
+        <section class="card" id="b-yonexPro">
+            <div> <img src="images/proRacketBlue.webp" alt="Yonex Pro Racket Blue Bag (9 Rackets)" class="image"></div>
+            <h3 class="title">Yonex Pro Racket Blue Bag (9 Rackets)</h3>
+            <p class="description">Built to meet the demands of serious competitors, the Yonex Pro Series 9 Pack Tennis
+                Bag
+                is a durable and spacious option. Three large racquet compartments are designed to hold up to 9 rackets
+                total, while one of the compartments features climate protective lining on the inside to protect your
+                valuable equipment from harsh temperatures. The middle pocket has a duffel-like entry and can be
+                utilized
+                for racquets or court gear and features access to a shoe pocket which can also be accessed from the
+                bottom
+                of the bag. The heavy duty backpack straps are padded and adjustable and there is a large exterior
+                accessory
+                compartment for additional gear on the front of the bag.</p>
+            <div class="priceAndOrder">
+                <div class="price"> price 94,90 €</div>
+                <button onclick="addItem(id)" type="button" class="order" id="yonexPro">add to cart</button>
+            </div>
+        </section>
+
+    </section>
+
+    <script src="src/home.js"></script>
+</body>
+
+</html>
